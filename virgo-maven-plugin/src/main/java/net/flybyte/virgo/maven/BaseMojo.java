@@ -236,6 +236,8 @@ public abstract class BaseMojo extends AbstractMojo {
 			ext = "properties";
 			throw new MojoFailureException("", new UnsupportedOperationException(
 					"The Maven packaging type 'virgo-property' is currently not supported."));
+		} else if ("pom".equalsIgnoreCase(packaging)){
+			ext = "plan";
 		} else {
 			throw new MojoFailureException("The given Maven packaging type is currently not supported");
 		}
